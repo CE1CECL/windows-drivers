@@ -30,3 +30,8 @@ jobs:
     - name: Build
       working-directory: ${{env.GITHUB_WORKSPACE}}
       run: msbuild /m /p:Configuration=${{matrix.BUILD_CONFIGURATION}} /p:Platform=${{matrix.PLATFORM}} ${{env.SOLUTION_FILE_PATH}}
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+         name: code-coverage-report
+         path: D:\a\windows-drivers
