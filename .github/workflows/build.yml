@@ -2,8 +2,6 @@ name: build
 
 on:
   workflow_dispatch: 
-  schedule:
-    - cron: '* * * * *'
     
 env:
   SOLUTION_FILE_PATH: .\build\bcm2836\buildbcm2836.sln
